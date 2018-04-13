@@ -156,7 +156,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="0UB-fZ-amb" customClass="CustomUISlider" customModule="checkin" customModuleProvider="target">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="0UB-fZ-amb" customClass="CustomUISlider" customModule="current_place_on_map" customModuleProvider="target">
                                 <rect key="frame" x="182" y="374" width="172" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="minimumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -418,7 +418,7 @@
                                     <action selector="relaxdclicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="vFM-ez-gIt"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="WDG-yz-Qkn" customClass="CustomUISlider" customModule="checkin" customModuleProvider="target">
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="WDG-yz-Qkn" customClass="CustomUISlider" customModule="current_place_on_map" customModuleProvider="target">
                                 <rect key="frame" x="182" y="443" width="172" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="minimumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -525,7 +525,7 @@
         <image name="fear3" width="608" height="641"/>
         <image name="feard" width="640" height="640"/>
         <image name="happy1" width="640" height="640"/>
-        <image name="happy2" width="640" height="640"/>
+        <image name="happy2" width="64" height="64"/>
         <image name="happy3" width="640" height="640"/>
         <image name="happyd" width="640" height="640"/>
         <image name="neutral" width="640" height="642"/>
