@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		43FA683C93D9814075669C9E /* libPods-current-place-on-map.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B6DAE685C4139E3E267D5D /* libPods-current-place-on-map.a */; };
+		CF83710220815FDA0025DEF6 /* current-place-on-map.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF8370FF20815F5F0025DEF6 /* current-place-on-map.xcdatamodeld */; };
+		CF837104208161CE0025DEF6 /* CustomUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF837103208161CE0025DEF6 /* CustomUISlider.swift */; };
+		CF837106208163AA0025DEF6 /* CheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF837105208163AA0025DEF6 /* CheckinViewController.swift */; };
 		E50C79BB1E4CFDE9008ECCEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C79BA1E4CFDE9008ECCEB /* AppDelegate.swift */; };
 		E50C79BD1E4CFDE9008ECCEB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C79BC1E4CFDE9008ECCEB /* MapViewController.swift */; };
 		E50C79C01E4CFDE9008ECCEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50C79BE1E4CFDE9008ECCEB /* Main.storyboard */; };
@@ -19,6 +22,9 @@
 /* Begin PBXFileReference section */
 		9F38BF454393A3D5F89DBC86 /* Pods-current-place-on-map.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-current-place-on-map.debug.xcconfig"; path = "Pods/Target Support Files/Pods-current-place-on-map/Pods-current-place-on-map.debug.xcconfig"; sourceTree = "<group>"; };
 		A5B6DAE685C4139E3E267D5D /* libPods-current-place-on-map.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-current-place-on-map.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF83710020815F5F0025DEF6 /* current-place-on-map.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "current-place-on-map.xcdatamodel"; sourceTree = "<group>"; };
+		CF837103208161CE0025DEF6 /* CustomUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUISlider.swift; sourceTree = "<group>"; };
+		CF837105208163AA0025DEF6 /* CheckinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinViewController.swift; sourceTree = "<group>"; };
 		E50AE729DE90351174E95425 /* Pods-current-place-on-map.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-current-place-on-map.release.xcconfig"; path = "Pods/Target Support Files/Pods-current-place-on-map/Pods-current-place-on-map.release.xcconfig"; sourceTree = "<group>"; };
 		E50C79B71E4CFDE9008ECCEB /* current-place-on-map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "current-place-on-map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50C79BA1E4CFDE9008ECCEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,10 +88,12 @@
 			children = (
 				E50C79CC1E4CFE32008ECCEB /* View Controllers */,
 				E50C79BA1E4CFDE9008ECCEB /* AppDelegate.swift */,
+				CF8370FF20815F5F0025DEF6 /* current-place-on-map.xcdatamodeld */,
 				E50C79BE1E4CFDE9008ECCEB /* Main.storyboard */,
 				E50C79C11E4CFDE9008ECCEB /* Assets.xcassets */,
 				E50C79C31E4CFDE9008ECCEB /* LaunchScreen.storyboard */,
 				E50C79C61E4CFDE9008ECCEB /* Info.plist */,
+				CF837103208161CE0025DEF6 /* CustomUISlider.swift */,
 			);
 			path = "current-place-on-map";
 			sourceTree = "<group>";
@@ -95,6 +103,7 @@
 			children = (
 				E50C79BC1E4CFDE9008ECCEB /* MapViewController.swift */,
 				E50C79CD1E4CFE5D008ECCEB /* PlacesViewController.swift */,
+				CF837105208163AA0025DEF6 /* CheckinViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -232,8 +241,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E50C79CE1E4CFE5D008ECCEB /* PlacesViewController.swift in Sources */,
+				CF83710220815FDA0025DEF6 /* current-place-on-map.xcdatamodeld in Sources */,
 				E50C79BD1E4CFDE9008ECCEB /* MapViewController.swift in Sources */,
 				E50C79BB1E4CFDE9008ECCEB /* AppDelegate.swift in Sources */,
+				CF837106208163AA0025DEF6 /* CheckinViewController.swift in Sources */,
+				CF837104208161CE0025DEF6 /* CustomUISlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +414,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CF8370FF20815F5F0025DEF6 /* current-place-on-map.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CF83710020815F5F0025DEF6 /* current-place-on-map.xcdatamodel */,
+			);
+			currentVersion = CF83710020815F5F0025DEF6 /* current-place-on-map.xcdatamodel */;
+			path = "current-place-on-map.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E50C79AF1E4CFDE9008ECCEB /* Project object */;
 }

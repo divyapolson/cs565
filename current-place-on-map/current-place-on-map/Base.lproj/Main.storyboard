@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4GJ-Rz-O6X">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ks3-k1-bAg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -80,7 +81,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z6F-H5-Vhi">
-                                <rect key="frame" x="0.0" y="108" width="375" height="515"/>
+                                <rect key="frame" x="0.0" y="108" width="375" height="466"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
@@ -105,10 +106,29 @@
             </objects>
             <point key="canvasLocation" x="1981.5999999999999" y="35.532233883058474"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZlI-2s-kfy">
+            <objects>
+                <tabBarController id="ks3-k1-bAg" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7BW-0O-kAW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="4GJ-Rz-O6X" kind="relationship" relationship="viewControllers" id="l3S-s2-LR4"/>
+                        <segue destination="cvA-HA-XLu" kind="relationship" relationship="viewControllers" id="hwz-Ud-OAE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfb-tT-niv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1157" y="-303"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="hiN-Xu-rtI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="4GJ-Rz-O6X" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="DuI-Qt-6t7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QXB-6c-7XX">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -116,7 +136,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LPX-7j-VT2">
-                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="574" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </toolbar>
@@ -128,5 +148,398 @@
             </objects>
             <point key="canvasLocation" x="438" y="36"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="VsO-YV-H2Q">
+            <objects>
+                <viewController id="cvA-HA-XLu" customClass="CheckinViewController" customModule="current_place_on_map" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Jj-US-pSD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="0UB-fZ-amb" customClass="CustomUISlider" customModule="checkin" customModuleProvider="target">
+                                <rect key="frame" x="182" y="374" width="172" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.62351046759999995" green="0.8839307153" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackHeight">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="slideproductivity:" destination="cvA-HA-XLu" eventType="valueChanged" id="Yb1-ih-O9k"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Productivity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuI-Bh-y0s">
+                                <rect key="frame" x="35" y="364" width="124" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.34646979550000001" green="0.34350860290000002" blue="0.41969384520000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ox-3t-sbm">
+                                <rect key="frame" x="9" y="87" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="angry1"/>
+                                <connections>
+                                    <action selector="angry1clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="nFI-UL-V8o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agu-mx-p72">
+                                <rect key="frame" x="53" y="87" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleColorEmojiUI" family=".Apple Color Emoji UI" pointSize="35"/>
+                                <state key="normal" image="angry2"/>
+                                <connections>
+                                    <action selector="angry2clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="bqL-DE-MES"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="inz-ez-rZT">
+                                <rect key="frame" x="97" y="87" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="angry3"/>
+                                <connections>
+                                    <action selector="angry3clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="R8k-tp-qZY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MwL-HH-tGf">
+                                <rect key="frame" x="44" y="131" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="angryd"/>
+                                <connections>
+                                    <action selector="angrydclicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="APa-kL-bN4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfi-Fy-Smw">
+                                <rect key="frame" x="88" y="87" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="sad1"/>
+                                <connections>
+                                    <action selector="sad1clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="g0r-4o-f1E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nC1-xd-i0g">
+                                <rect key="frame" x="132" y="87" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleColorEmojiUI" family=".Apple Color Emoji UI" pointSize="35"/>
+                                <state key="normal" image="sad2"/>
+                                <connections>
+                                    <action selector="sad2clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="usa-Lq-L3a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlS-Fz-yIc">
+                                <rect key="frame" x="176" y="87" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="sad3"/>
+                                <connections>
+                                    <action selector="sad3clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="IHT-s7-6gi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t1A-ZY-YCg" userLabel="Sadd">
+                                <rect key="frame" x="123" y="131" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="sadd"/>
+                                <connections>
+                                    <action selector="saddclicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="wMP-VP-Ib6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D3-33-Gsh">
+                                <rect key="frame" x="246" y="87" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="fear1"/>
+                                <connections>
+                                    <action selector="fear1clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="3ei-yI-hya"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NpZ-VE-bev" userLabel="Fear2">
+                                <rect key="frame" x="290" y="87" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleColorEmojiUI" family=".Apple Color Emoji UI" pointSize="35"/>
+                                <state key="normal" image="fear2"/>
+                                <connections>
+                                    <action selector="fea2clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="sxr-NW-9xt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaX-PA-DPz">
+                                <rect key="frame" x="334" y="87" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="fear3"/>
+                                <connections>
+                                    <action selector="fear3clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="0i5-0z-dAW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYm-k6-VW5">
+                                <rect key="frame" x="281" y="131" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="feard"/>
+                                <connections>
+                                    <action selector="feardclicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="9Cl-v5-bOs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdT-hg-8JU">
+                                <rect key="frame" x="167" y="87" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="anxious1"/>
+                                <connections>
+                                    <action selector="anxious1clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="zoi-qo-tZW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qem-Y1-tke">
+                                <rect key="frame" x="211" y="87" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleColorEmojiUI" family=".Apple Color Emoji UI" pointSize="35"/>
+                                <state key="normal" image="anxious2"/>
+                                <connections>
+                                    <action selector="anxious2clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="vp0-JU-fS4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="852-z5-nuI">
+                                <rect key="frame" x="255" y="87" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="anxious3"/>
+                                <connections>
+                                    <action selector="anxious3clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="8zu-TM-0ew"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6y7-by-GcP">
+                                <rect key="frame" x="202" y="131" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="anxiousd"/>
+                                <connections>
+                                    <action selector="anxiousdclicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="9UL-Ml-hBN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcc-x8-b3E">
+                                <rect key="frame" x="53" y="193" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleColorEmojiUI" family=".Apple Color Emoji UI" pointSize="35"/>
+                                <state key="normal" image="neutral"/>
+                                <connections>
+                                    <action selector="neutralclicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="wcz-IJ-pqg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDC-R1-ANg">
+                                <rect key="frame" x="44" y="237" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="neutrald"/>
+                                <connections>
+                                    <action selector="neutraldclicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="Qkg-hg-FCQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEd-h2-nLD">
+                                <rect key="frame" x="246" y="193" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="happy1"/>
+                                <connections>
+                                    <action selector="happy1clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="j6M-0N-sCS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVP-dj-5TU">
+                                <rect key="frame" x="290" y="193" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleColorEmojiUI" family=".Apple Color Emoji UI" pointSize="35"/>
+                                <state key="normal" image="happy2"/>
+                                <connections>
+                                    <action selector="happy2clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="iUO-IV-q9S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aG0-Ig-qJ7">
+                                <rect key="frame" x="334" y="193" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="happy3"/>
+                                <connections>
+                                    <action selector="happy3clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="gyl-Ba-1rB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4WI-lz-Ndf">
+                                <rect key="frame" x="281" y="237" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="happyd"/>
+                                <connections>
+                                    <action selector="happydclicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="SDi-we-AUu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEB-9h-dmX">
+                                <rect key="frame" x="88" y="193" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="play1"/>
+                                <connections>
+                                    <action selector="play1clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="dQb-Qg-eMX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fs8-fG-rvf">
+                                <rect key="frame" x="132" y="193" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleColorEmojiUI" family=".Apple Color Emoji UI" pointSize="35"/>
+                                <state key="normal" image="play2"/>
+                                <connections>
+                                    <action selector="play2clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="VAD-BA-vNH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93Y-eP-wnG">
+                                <rect key="frame" x="176" y="193" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="play3"/>
+                                <connections>
+                                    <action selector="play3clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="dWo-bd-lgS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aX3-QI-Qox">
+                                <rect key="frame" x="123" y="237" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="playd"/>
+                                <connections>
+                                    <action selector="playdclicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="KPn-d7-mT9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31D-Kd-REn">
+                                <rect key="frame" x="189" y="193" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleColorEmojiUI" family=".Apple Color Emoji UI" pointSize="35"/>
+                                <state key="normal" image="relax1"/>
+                                <connections>
+                                    <action selector="relax1clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="5cg-it-mzE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyz-ms-DCt">
+                                <rect key="frame" x="233" y="193" width="36" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="relax2"/>
+                                <connections>
+                                    <action selector="relax2clicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="0Id-is-zeE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1R-wz-oNr">
+                                <rect key="frame" x="201" y="237" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="relaxd"/>
+                                <connections>
+                                    <action selector="relaxdclicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="vFM-ez-gIt"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="WDG-yz-Qkn" customClass="CustomUISlider" customModule="checkin" customModuleProvider="target">
+                                <rect key="frame" x="182" y="443" width="172" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.62351046759999995" green="0.8839307153" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trackHeight">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="slideenergy:" destination="cvA-HA-XLu" eventType="valueChanged" id="jkX-Sc-5Hb"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Energy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYr-SG-fJ4">
+                                <rect key="frame" x="35" y="433" width="72" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.34646979550000001" green="0.34350860290000002" blue="0.41969384520000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="comments (optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8mC-mk-LXz">
+                                <rect key="frame" x="35" y="503" width="317" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxC-ym-Uub">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Item" id="M5z-ig-6g4"/>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJp-qk-GkX">
+                                <rect key="frame" x="139" y="563" width="93" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.62351046759999995" green="0.8839307153" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitclicked:" destination="cvA-HA-XLu" eventType="touchUpInside" id="Qzb-BE-eeS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="RWF-0K-adn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Oh6-cT-HeH"/>
+                    <connections>
+                        <outlet property="angry1" destination="9ox-3t-sbm" id="K38-dH-Lzr"/>
+                        <outlet property="angry2" destination="agu-mx-p72" id="10j-3B-COS"/>
+                        <outlet property="angry3" destination="inz-ez-rZT" id="avl-bk-gE6"/>
+                        <outlet property="angryd" destination="MwL-HH-tGf" id="OLr-s6-kVK"/>
+                        <outlet property="anxious1" destination="SdT-hg-8JU" id="fn4-3G-kJm"/>
+                        <outlet property="anxious2" destination="qem-Y1-tke" id="bdi-os-Tpr"/>
+                        <outlet property="anxious3" destination="852-z5-nuI" id="7Uu-Zb-Z2r"/>
+                        <outlet property="anxiousd" destination="6y7-by-GcP" id="A8B-i6-dMD"/>
+                        <outlet property="comments" destination="8mC-mk-LXz" id="clx-zK-z2r"/>
+                        <outlet property="energyslider" destination="WDG-yz-Qkn" id="Cbc-c7-Tio"/>
+                        <outlet property="fear1" destination="7D3-33-Gsh" id="NTC-1P-JSg"/>
+                        <outlet property="fear2" destination="NpZ-VE-bev" id="zrD-Bd-o94"/>
+                        <outlet property="fear3" destination="RaX-PA-DPz" id="0mk-VH-PGt"/>
+                        <outlet property="feard" destination="KYm-k6-VW5" id="fbf-rC-ZFn"/>
+                        <outlet property="happy1" destination="fEd-h2-nLD" id="fDf-IZ-VWh"/>
+                        <outlet property="happy2" destination="eVP-dj-5TU" id="iF4-ja-TxT"/>
+                        <outlet property="happy3" destination="aG0-Ig-qJ7" id="rp3-UB-2fL"/>
+                        <outlet property="happyd" destination="4WI-lz-Ndf" id="YD0-st-7VH"/>
+                        <outlet property="neutral" destination="jcc-x8-b3E" id="Gzk-or-KoV"/>
+                        <outlet property="neutrald" destination="nDC-R1-ANg" id="AWf-hK-MM7"/>
+                        <outlet property="play1" destination="fEB-9h-dmX" id="ZZ9-9D-bvW"/>
+                        <outlet property="play2" destination="fs8-fG-rvf" id="am8-pF-rx4"/>
+                        <outlet property="play3" destination="93Y-eP-wnG" id="jQm-sr-2TR"/>
+                        <outlet property="playd" destination="aX3-QI-Qox" id="lbU-RM-kvu"/>
+                        <outlet property="productivityslider" destination="0UB-fZ-amb" id="Na2-4h-nqz"/>
+                        <outlet property="relax1" destination="31D-Kd-REn" id="pdY-o5-s26"/>
+                        <outlet property="relax2" destination="gyz-ms-DCt" id="AMk-2u-CSb"/>
+                        <outlet property="relaxd" destination="N1R-wz-oNr" id="9eP-vn-ZCw"/>
+                        <outlet property="sad1" destination="Hfi-Fy-Smw" id="Bcv-uF-kQq"/>
+                        <outlet property="sad2" destination="nC1-xd-i0g" id="g0p-rN-Eak"/>
+                        <outlet property="sad3" destination="KlS-Fz-yIc" id="6VJ-m2-CdR"/>
+                        <outlet property="sadd" destination="t1A-ZY-YCg" id="njd-CE-UmG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="61p-7s-cZb" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-481" y="886"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="angry1" width="640" height="640"/>
+        <image name="angry2" width="612" height="663"/>
+        <image name="angry3" width="640" height="640"/>
+        <image name="angryd" width="640" height="640"/>
+        <image name="anxious1" width="604" height="651"/>
+        <image name="anxious2" width="640" height="640"/>
+        <image name="anxious3" width="640" height="640"/>
+        <image name="anxiousd" width="604" height="651"/>
+        <image name="fear1" width="640" height="640"/>
+        <image name="fear2" width="640" height="640"/>
+        <image name="fear3" width="608" height="641"/>
+        <image name="feard" width="640" height="640"/>
+        <image name="happy1" width="640" height="640"/>
+        <image name="happy2" width="640" height="640"/>
+        <image name="happy3" width="640" height="640"/>
+        <image name="happyd" width="640" height="640"/>
+        <image name="neutral" width="640" height="642"/>
+        <image name="neutrald" width="640" height="642"/>
+        <image name="play1" width="614" height="681"/>
+        <image name="play2" width="614" height="681"/>
+        <image name="play3" width="641" height="608"/>
+        <image name="playd" width="614" height="681"/>
+        <image name="relax1" width="640" height="640"/>
+        <image name="relax2" width="640" height="640"/>
+        <image name="relaxd" width="640" height="640"/>
+        <image name="sad1" width="640" height="640"/>
+        <image name="sad2" width="640" height="640"/>
+        <image name="sad3" width="640" height="652"/>
+        <image name="sadd" width="640" height="640"/>
+    </resources>
 </document>
