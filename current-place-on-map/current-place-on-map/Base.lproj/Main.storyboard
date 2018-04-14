@@ -118,17 +118,18 @@
                     <connections>
                         <segue destination="4GJ-Rz-O6X" kind="relationship" relationship="viewControllers" id="l3S-s2-LR4"/>
                         <segue destination="cvA-HA-XLu" kind="relationship" relationship="viewControllers" id="hwz-Ud-OAE"/>
+                        <segue destination="MEk-Ml-wrs" kind="relationship" relationship="viewControllers" id="kxE-7l-dIG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfb-tT-niv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1157" y="-303"/>
         </scene>
-        <!--Item-->
+        <!--Discover-->
         <scene sceneID="hiN-Xu-rtI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4GJ-Rz-O6X" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="DuI-Qt-6t7"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="placeholder" id="DuI-Qt-6t7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QXB-6c-7XX">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -143,7 +144,7 @@
             </objects>
             <point key="canvasLocation" x="438" y="36"/>
         </scene>
-        <!--Item-->
+        <!--Check-In-->
         <scene sceneID="VsO-YV-H2Q">
             <objects>
                 <viewController id="cvA-HA-XLu" customClass="CheckinViewController" customModule="current_place_on_map" customModuleProvider="target" sceneMemberID="viewController">
@@ -465,7 +466,7 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="RWF-0K-adn"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Oh6-cT-HeH"/>
+                    <tabBarItem key="tabBarItem" title="Check-In" image="contract" id="Oh6-cT-HeH"/>
                     <connections>
                         <outlet property="angry1" destination="9ox-3t-sbm" id="K38-dH-Lzr"/>
                         <outlet property="angry2" destination="agu-mx-p72" id="10j-3B-COS"/>
@@ -505,17 +506,36 @@
             </objects>
             <point key="canvasLocation" x="-481" y="886"/>
         </scene>
+        <!--Account-->
+        <scene sceneID="4qY-KL-s5Q">
+            <objects>
+                <viewController id="MEk-Ml-wrs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="We3-ij-dpx"/>
+                        <viewControllerLayoutGuide type="bottom" id="HE0-kH-qkG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sqF-LF-4ps">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Account" image="user" id="1i8-YY-faE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w3X-bg-7XS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="363" y="715"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="Po3-f2-dkh">
             <objects>
                 <viewController id="9V4-qn-SyF" customClass="LoginViewController" customModule="current_place_on_map" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="3IG-vg-zUI">
+                    <view key="view" contentMode="scaleToFill" id="3IG-vg-zUI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbN-zp-QYp">
+                            <view contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbN-zp-QYp">
                                 <rect key="frame" x="0.0" y="20" width="375" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mrZ-Rh-MV2">
                                         <rect key="frame" x="149" y="20" width="77" height="39"/>
@@ -681,6 +701,7 @@
         <image name="anxious2" width="640" height="640"/>
         <image name="anxious3" width="640" height="640"/>
         <image name="anxiousd" width="604" height="651"/>
+        <image name="contract" width="32" height="32"/>
         <image name="fear1" width="640" height="640"/>
         <image name="fear2" width="640" height="640"/>
         <image name="fear3" width="608" height="641"/>
@@ -691,6 +712,7 @@
         <image name="happyd" width="640" height="640"/>
         <image name="neutral" width="640" height="642"/>
         <image name="neutrald" width="640" height="642"/>
+        <image name="placeholder" width="32" height="32"/>
         <image name="play1" width="614" height="681"/>
         <image name="play2" width="614" height="681"/>
         <image name="play3" width="641" height="608"/>
@@ -702,5 +724,6 @@
         <image name="sad2" width="640" height="640"/>
         <image name="sad3" width="640" height="652"/>
         <image name="sadd" width="640" height="640"/>
+        <image name="user" width="32" height="32"/>
     </resources>
 </document>
