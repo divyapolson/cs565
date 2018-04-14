@@ -11,6 +11,9 @@
 		CF83710220815FDA0025DEF6 /* current-place-on-map.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF8370FF20815F5F0025DEF6 /* current-place-on-map.xcdatamodeld */; };
 		CF837104208161CE0025DEF6 /* CustomUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF837103208161CE0025DEF6 /* CustomUISlider.swift */; };
 		CF837106208163AA0025DEF6 /* CheckinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF837105208163AA0025DEF6 /* CheckinViewController.swift */; };
+		CF83710820829E470025DEF6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83710720829E470025DEF6 /* LoginViewController.swift */; };
+		CF83710A2082A46E0025DEF6 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF8371092082A46E0025DEF6 /* SignupViewController.swift */; };
+		CF83710C2082B14A0025DEF6 /* UserdataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83710B2082B14A0025DEF6 /* UserdataHandler.swift */; };
 		E50C79BB1E4CFDE9008ECCEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C79BA1E4CFDE9008ECCEB /* AppDelegate.swift */; };
 		E50C79BD1E4CFDE9008ECCEB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C79BC1E4CFDE9008ECCEB /* MapViewController.swift */; };
 		E50C79C01E4CFDE9008ECCEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50C79BE1E4CFDE9008ECCEB /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 		CF83710020815F5F0025DEF6 /* current-place-on-map.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "current-place-on-map.xcdatamodel"; sourceTree = "<group>"; };
 		CF837103208161CE0025DEF6 /* CustomUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUISlider.swift; sourceTree = "<group>"; };
 		CF837105208163AA0025DEF6 /* CheckinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinViewController.swift; sourceTree = "<group>"; };
+		CF83710720829E470025DEF6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CF8371092082A46E0025DEF6 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		CF83710B2082B14A0025DEF6 /* UserdataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserdataHandler.swift; sourceTree = "<group>"; };
 		E50AE729DE90351174E95425 /* Pods-current-place-on-map.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-current-place-on-map.release.xcconfig"; path = "Pods/Target Support Files/Pods-current-place-on-map/Pods-current-place-on-map.release.xcconfig"; sourceTree = "<group>"; };
 		E50C79B71E4CFDE9008ECCEB /* current-place-on-map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "current-place-on-map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50C79BA1E4CFDE9008ECCEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 				E50C79C31E4CFDE9008ECCEB /* LaunchScreen.storyboard */,
 				E50C79C61E4CFDE9008ECCEB /* Info.plist */,
 				CF837103208161CE0025DEF6 /* CustomUISlider.swift */,
+				CF83710B2082B14A0025DEF6 /* UserdataHandler.swift */,
 			);
 			path = "current-place-on-map";
 			sourceTree = "<group>";
@@ -104,6 +111,8 @@
 				E50C79BC1E4CFDE9008ECCEB /* MapViewController.swift */,
 				E50C79CD1E4CFE5D008ECCEB /* PlacesViewController.swift */,
 				CF837105208163AA0025DEF6 /* CheckinViewController.swift */,
+				CF83710720829E470025DEF6 /* LoginViewController.swift */,
+				CF8371092082A46E0025DEF6 /* SignupViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -240,8 +249,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF83710820829E470025DEF6 /* LoginViewController.swift in Sources */,
 				E50C79CE1E4CFE5D008ECCEB /* PlacesViewController.swift in Sources */,
+				CF83710A2082A46E0025DEF6 /* SignupViewController.swift in Sources */,
 				CF83710220815FDA0025DEF6 /* current-place-on-map.xcdatamodeld in Sources */,
+				CF83710C2082B14A0025DEF6 /* UserdataHandler.swift in Sources */,
 				E50C79BD1E4CFDE9008ECCEB /* MapViewController.swift in Sources */,
 				E50C79BB1E4CFDE9008ECCEB /* AppDelegate.swift in Sources */,
 				CF837106208163AA0025DEF6 /* CheckinViewController.swift in Sources */,

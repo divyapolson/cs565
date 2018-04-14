@@ -17,6 +17,7 @@ import UIKit
 import CoreData
 import GoogleMaps
 import GooglePlaces
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    UNUserNotificationCenter.current().requestAuthorization(options: [.alert,.badge,.sound]){(granted, error) in
+        print("granted: \(granted)")
+    }
     GMSServices.provideAPIKey("AIzaSyACRKK-8c_0IP0iWIGETtS2A8C5KFY_d74")
     GMSPlacesClient.provideAPIKey("AIzaSyACRKK-8c_0IP0iWIGETtS2A8C5KFY_d74")
     return true

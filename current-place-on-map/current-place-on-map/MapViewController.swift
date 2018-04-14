@@ -16,6 +16,7 @@
 import UIKit
 import GoogleMaps
 import GooglePlaces
+import UserNotifications
 
 class MapViewController: UIViewController {
     
@@ -52,6 +53,14 @@ class MapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Long time no see!"
+        content.body = "You haven't check in at GO for a while! We all missed you :)"
+        content.sound = UNNotificationSound.default()
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: "timeidentifier", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request,withCompletionHandler: nil)
         
         // Initialize the location manager.
         locationManager = CLLocationManager()
