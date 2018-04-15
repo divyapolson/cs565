@@ -11,6 +11,7 @@ import CoreData
 
 class CheckinViewController: UIViewController {
 
+    @IBOutlet weak var checkinlabel: UILabel!
     @IBOutlet weak var comments: UITextField!
     @IBOutlet weak var angry1: UIButton!
     @IBOutlet weak var angry2: UIButton!
@@ -155,6 +156,9 @@ class CheckinViewController: UIViewController {
         happy3.center = happyd.center
         happyd_click = false
         happyscale = 0
+        
+        self.checkinlabel.text = "Check in to: \(spaceName)"
+        
     }
 
     @IBAction func angry1clicked(_ sender: UIButton) {
