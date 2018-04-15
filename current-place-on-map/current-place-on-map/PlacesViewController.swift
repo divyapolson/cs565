@@ -18,7 +18,7 @@ import GooglePlaces
 
 class PlacesViewController: UIViewController {
     
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
     // An array to hold the list of possible locations.
     //var likelyPlaces: [GMSPlace] = []
