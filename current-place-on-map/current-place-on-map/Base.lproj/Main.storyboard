@@ -793,15 +793,6 @@
                                     <action selector="createaccountpressed:" destination="cwQ-if-ezg" eventType="touchUpInside" id="wbH-ps-l8d"/>
                                 </connections>
                             </button>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="27" translatesAutoresizingMaskIntoConstraints="NO" id="lqY-bD-7ux">
-                                <rect key="frame" x="-71" y="137" width="375" height="27"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lqY-bD-7ux" id="OoB-hn-kOv">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="26.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.16237968210000001" green="0.6783688068" blue="0.74646025900000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tableViewCell>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="n8W-pM-hQf"/>
