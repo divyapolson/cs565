@@ -159,7 +159,17 @@ class CheckinViewController: UIViewController {
         
         self.checkinlabel.text = "\(spaceName)"
         
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+        
     }
+
+//Calls this function when the tap is recognized.
+func dismissKeyboard() {
+    view.endEditing(true)
+}
 
     @IBAction func angry1clicked(_ sender: UIButton) {
         angryd.setImage(#imageLiteral(resourceName: "angry1"), for: .normal)
