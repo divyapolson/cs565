@@ -112,6 +112,7 @@ class MapViewController: UIViewController {
             space_marker.position = CLLocationCoordinate2D(latitude: space.lat, longitude: space.long)
             space_marker.title = space.name
             space_marker.snippet = space.desc
+            space_marker.icon = GMSMarker.markerImage(with: UIColor(red:0.20, green:0.68, blue:0.75, alpha:1.0))
             space_marker.map = mapView
         }
         
