@@ -18,6 +18,8 @@ var globalPlaces = [String]()
 
 var globalSelectedPlaces:String = ""
 
+var globalUsername:String = ""
+
 struct Space {
     let name: String
     let lat: CLLocationDegrees

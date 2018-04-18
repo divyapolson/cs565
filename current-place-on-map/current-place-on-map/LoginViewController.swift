@@ -55,6 +55,7 @@ class LoginViewController: UIViewController {
         for i in users! {
             if (i.username == enteru && i.password == enterp) {
                 flag = true
+                globalUsername = i.username!
                 break
             }
         }

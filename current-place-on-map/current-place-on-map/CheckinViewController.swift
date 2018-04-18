@@ -45,6 +45,7 @@ class CheckinViewController: UIViewController {
     @IBOutlet weak var productivityslider: UISlider!
     @IBOutlet weak var energyslider: CustomUISlider!
     
+    var checkin_loc:String = ""
     var angryd_click = false
     var angryscale = 0
     var angry1loc: CGPoint!
@@ -158,7 +159,7 @@ class CheckinViewController: UIViewController {
         happyscale = 0
         
         self.checkinlabel.text = "\(spaceName)"
-        
+        checkin_loc = spaceName
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         tap.cancelsTouchesInView = false
@@ -567,6 +568,8 @@ func dismissKeyboard() {
         newData.setValue(energyscale, forKey: "energy")
         newData.setValue(comments.text, forKey: "comments")
         newData.setValue(Date(), forKey: "time")
+        newData.setValue(checkin_loc, forKey: "place")
+        newData.setValue(globalUsername, forKey: "username")
         print(newData)
         do {
             try context.save()
