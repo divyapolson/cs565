@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		43FA683C93D9814075669C9E /* libPods-current-place-on-map.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5B6DAE685C4139E3E267D5D /* libPods-current-place-on-map.a */; };
+		4418651F20870E7E00CF82CA /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 4418651E20870E7E00CF82CA /* style.json */; };
 		443F26A52082D3C8002246BE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F26A42082D3C8002246BE /* Constants.swift */; };
 		443F26A72082D4D4002246BE /* SpaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 443F26A62082D4D4002246BE /* SpaceDetailViewController.swift */; };
 		CF83710220815FDA0025DEF6 /* current-place-on-map.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF8370FF20815F5F0025DEF6 /* current-place-on-map.xcdatamodeld */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4418651E20870E7E00CF82CA /* style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
 		443F26A42082D3C8002246BE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		443F26A62082D4D4002246BE /* SpaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceDetailViewController.swift; sourceTree = "<group>"; };
 		9F38BF454393A3D5F89DBC86 /* Pods-current-place-on-map.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-current-place-on-map.debug.xcconfig"; path = "Pods/Target Support Files/Pods-current-place-on-map/Pods-current-place-on-map.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				E50C79C61E4CFDE9008ECCEB /* Info.plist */,
 				CF837103208161CE0025DEF6 /* CustomUISlider.swift */,
 				CF83710B2082B14A0025DEF6 /* UserdataHandler.swift */,
+				4418651E20870E7E00CF82CA /* style.json */,
 			);
 			path = "current-place-on-map";
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				E50C79C51E4CFDE9008ECCEB /* LaunchScreen.storyboard in Resources */,
 				E50C79C21E4CFDE9008ECCEB /* Assets.xcassets in Resources */,
 				E50C79C01E4CFDE9008ECCEB /* Main.storyboard in Resources */,
+				4418651F20870E7E00CF82CA /* style.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

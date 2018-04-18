@@ -55,7 +55,7 @@ class MapViewController: UIViewController {
         */
         listLikelyPlaces()
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -85,6 +85,19 @@ class MapViewController: UIViewController {
         mapView.settings.myLocationButton = true
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.isMyLocationEnabled = true
+        
+        do {
+            // Set the map style by passing the URL of the local file. Make sure style.json is present in your project
+            if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
+                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+            } else {
+                print("Unable to find style.json")
+            }
+        } catch {
+            print("The style definition could not be loaded: \(error)")
+        }
+        
+        
         
         // Add the map to the view, hide it until we've got a location update.
         view.addSubview(mapView)
