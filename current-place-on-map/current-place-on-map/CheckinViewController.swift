@@ -157,7 +157,7 @@ class CheckinViewController: UIViewController {
         happyd_click = false
         happyscale = 0
         
-        self.checkinlabel.text = "Check in to: \(spaceName)"
+        self.checkinlabel.text = "\(spaceName)"
         
     }
 

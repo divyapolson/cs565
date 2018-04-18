@@ -19,7 +19,7 @@ class SpaceDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.spacetitle.text = "\(globalSelectedPlaces)"
-
+        self.spacedesc.text = "\((dict[globalSelectedPlaces])?.desc)"
     }
     
     override func didReceiveMemoryWarning() {
