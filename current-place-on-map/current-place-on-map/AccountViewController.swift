@@ -17,10 +17,32 @@ class AccountViewController: UIViewController, UITableViewDataSource {
     var prodarr = [Int]()
     var energyarr = [Int]()
     var timearr = [NSDate]()
+    var isLoadingViewController = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        isLoadingViewController = true
+        viewLoadSetup()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if isLoadingViewController {
+            isLoadingViewController = false
+        } else {
+            viewLoadSetup()
+            historytable.reloadData()
+        }
+        
+    }
+    
+    func viewLoadSetup() {
+        
         historytable.dataSource = self
         
+        placearr = [String]()
+        commentarr = [String]()
+        prodarr = [Int]()
+        energyarr = [Int]()
+        timearr = [NSDate]()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
@@ -41,6 +63,7 @@ class AccountViewController: UIViewController, UITableViewDataSource {
         }
         points.text = String(15*placearr.count)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
