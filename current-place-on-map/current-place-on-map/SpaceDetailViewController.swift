@@ -12,6 +12,7 @@ class SpaceDetailViewController: UIViewController {
     
     @IBOutlet weak var spacetitle: UILabel!
     @IBOutlet weak var spacedesc: UILabel!
+    @IBOutlet weak var spaceemojis: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,8 @@ class SpaceDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.spacetitle.text = "\(globalSelectedPlaces)"
-        self.spacedesc.text = "\((dict[globalSelectedPlaces])?.desc)"
+        self.spacedesc.text = "\((dict[globalSelectedPlaces])!.desc)"
+        self.spaceemojis.text = "\((dict[globalSelectedPlaces])!.emojis)"
     }
     
     override func didReceiveMemoryWarning() {

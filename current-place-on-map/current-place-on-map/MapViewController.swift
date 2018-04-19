@@ -86,6 +86,8 @@ class MapViewController: UIViewController {
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.isMyLocationEnabled = true
         
+        self.mapView.delegate = self
+        
         do {
             // Set the map style by passing the URL of the local file. Make sure style.json is present in your project
             if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
@@ -111,7 +113,7 @@ class MapViewController: UIViewController {
             let space_marker = GMSMarker()
             space_marker.position = CLLocationCoordinate2D(latitude: space.lat, longitude: space.long)
             space_marker.title = space.name
-            space_marker.snippet = space.desc
+            space_marker.snippet = "\(space.emojis)\n\(space.desc)"
             space_marker.icon = GMSMarker.markerImage(with: UIColor(red:0.20, green:0.68, blue:0.75, alpha:1.0))
             space_marker.map = mapView
         }
@@ -252,6 +254,15 @@ extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         locationManager.stopUpdatingLocation()
         print("Error: \(error)")
+    }
+}
+
+extension MapViewController: GMSMapViewDelegate {
+    internal func mapView(_ mapView: GMSMapView, didTapInfoWindowOfMarker marker: GMSMarker) -> Bool {
+        selectedPlace = marker.title!
+        globalSelectedPlaces = selectedPlace
+        performSegue(withIdentifier: "todetail", sender: self)
+        return true
     }
 }
 
