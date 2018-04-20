@@ -10,6 +10,8 @@ import UIKit
 
 class AccountViewController: UIViewController, UITableViewDataSource {
 
+    @IBOutlet weak var badgereminder: UILabel!
+    @IBOutlet weak var emptyreminder: UILabel!
     @IBOutlet weak var historytable: UITableView!
     @IBOutlet weak var points: UILabel!
     var placearr = [String]()
@@ -88,8 +90,16 @@ class AccountViewController: UIViewController, UITableViewDataSource {
                 checkinarr.insert(item, at:0)
             }
         }
+        if checkinarr.count == 0 {
+            historytable.isHidden = true
+            emptyreminder.text = "You currently don't have any check-in history. Try our check-in feature!"
+        } else {
+            historytable.isHidden = false
+            emptyreminder.text = ""
+        }
         let usernow = UserdataHandler.fetchOneObject(username:globalUsername)
         points.text = String(usernow!.point)
+        badgereminder.text = "You are "+String(1000-usernow!.point)+" points away from gold badge!"
     }
     
     override func didReceiveMemoryWarning() {
@@ -202,6 +212,8 @@ class AccountViewController: UIViewController, UITableViewDataSource {
             
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: .automatic)
+            viewLoadSetup()
+            historytable.reloadData()
             tableView.endUpdates()
         }
     }
