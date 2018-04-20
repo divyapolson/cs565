@@ -19,6 +19,7 @@
 		CF83710C2082B14A0025DEF6 /* UserdataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83710B2082B14A0025DEF6 /* UserdataHandler.swift */; };
 		CF83710E2087C01E0025DEF6 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83710D2087C01E0025DEF6 /* AccountViewController.swift */; };
 		CF8371102087C5BB0025DEF6 /* LogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF83710F2087C5BB0025DEF6 /* LogTableViewCell.swift */; };
+		CF837114208A7D750025DEF6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF837113208A7D750025DEF6 /* SettingsViewController.swift */; };
 		E50C79BB1E4CFDE9008ECCEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C79BA1E4CFDE9008ECCEB /* AppDelegate.swift */; };
 		E50C79BD1E4CFDE9008ECCEB /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E50C79BC1E4CFDE9008ECCEB /* MapViewController.swift */; };
 		E50C79C01E4CFDE9008ECCEB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E50C79BE1E4CFDE9008ECCEB /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		CF83710B2082B14A0025DEF6 /* UserdataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserdataHandler.swift; sourceTree = "<group>"; };
 		CF83710D2087C01E0025DEF6 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		CF83710F2087C5BB0025DEF6 /* LogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewCell.swift; sourceTree = "<group>"; };
+		CF837113208A7D750025DEF6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E50AE729DE90351174E95425 /* Pods-current-place-on-map.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-current-place-on-map.release.xcconfig"; path = "Pods/Target Support Files/Pods-current-place-on-map/Pods-current-place-on-map.release.xcconfig"; sourceTree = "<group>"; };
 		E50C79B71E4CFDE9008ECCEB /* current-place-on-map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "current-place-on-map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50C79BA1E4CFDE9008ECCEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				443F26A42082D3C8002246BE /* Constants.swift */,
 				443F26A62082D4D4002246BE /* SpaceDetailViewController.swift */,
 				CF83710D2087C01E0025DEF6 /* AccountViewController.swift */,
+				CF837113208A7D750025DEF6 /* SettingsViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				CF83710C2082B14A0025DEF6 /* UserdataHandler.swift in Sources */,
 				443F26A52082D3C8002246BE /* Constants.swift in Sources */,
 				E50C79BD1E4CFDE9008ECCEB /* MapViewController.swift in Sources */,
+				CF837114208A7D750025DEF6 /* SettingsViewController.swift in Sources */,
 				E50C79BB1E4CFDE9008ECCEB /* AppDelegate.swift in Sources */,
 				CF837106208163AA0025DEF6 /* CheckinViewController.swift in Sources */,
 				CF837104208161CE0025DEF6 /* CustomUISlider.swift in Sources */,

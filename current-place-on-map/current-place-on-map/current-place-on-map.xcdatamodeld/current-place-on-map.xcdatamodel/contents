@@ -2,6 +2,8 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Account" representedClassName="Account" syncable="YES" codeGenerationType="class">
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="point" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="privacy" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Checkindata" representedClassName="Checkindata" syncable="YES" codeGenerationType="class">
@@ -21,7 +23,7 @@
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Account" positionX="-36" positionY="99" width="128" height="75"/>
+        <element name="Account" positionX="-36" positionY="99" width="128" height="105"/>
         <element name="Checkindata" positionX="-54" positionY="-9" width="128" height="255"/>
     </elements>
 </model>

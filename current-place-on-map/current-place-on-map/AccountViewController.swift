@@ -16,6 +16,15 @@ class AccountViewController: UIViewController, UITableViewDataSource {
     var commentarr = [String]()
     var prodarr = [Int]()
     var energyarr = [Int]()
+    var angryarr = [Int]()
+    var sadarr = [Int]()
+    var anxiousarr = [Int]()
+    var feararr = [Int]()
+    var happyarr = [Int]()
+    var neutralarr = [Int]()
+    var playarr = [Int]()
+    var relaxarr = [Int]()
+    var checkinarr = [Checkindata]()
     var timearr = [NSDate]()
     var isLoadingViewController = false
     override func viewDidLoad() {
@@ -38,11 +47,20 @@ class AccountViewController: UIViewController, UITableViewDataSource {
         
         historytable.dataSource = self
         
+        checkinarr = [Checkindata]()
         placearr = [String]()
         commentarr = [String]()
         prodarr = [Int]()
         energyarr = [Int]()
         timearr = [NSDate]()
+        angryarr = [Int]()
+        sadarr = [Int]()
+        anxiousarr = [Int]()
+        feararr = [Int]()
+        happyarr = [Int]()
+        neutralarr = [Int]()
+        playarr = [Int]()
+        relaxarr = [Int]()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
@@ -59,9 +77,19 @@ class AccountViewController: UIViewController, UITableViewDataSource {
                 energyarr.insert(Int(item.energy), at: 0)
                 prodarr.insert(Int(item.productivity),at:0)
                 timearr.insert(item.time!, at:0)
+                angryarr.insert(Int(item.angry),at:0)
+                sadarr.insert(Int(item.sad),at:0)
+                anxiousarr.insert(Int(item.anxious),at:0)
+                feararr.insert(Int(item.fear),at:0)
+                happyarr.insert(Int(item.happy),at:0)
+                neutralarr.insert(Int(item.neutral),at:0)
+                playarr.insert(Int(item.play),at:0)
+                relaxarr.insert(Int(item.relax),at:0)
+                checkinarr.insert(item, at:0)
             }
         }
-        points.text = String(15*placearr.count)
+        let usernow = UserdataHandler.fetchOneObject(username:globalUsername)
+        points.text = String(usernow!.point)
     }
     
     override func didReceiveMemoryWarning() {
@@ -87,7 +115,95 @@ class AccountViewController: UIViewController, UITableViewDataSource {
         formatter.dateStyle = .medium
         formatter.timeStyle = .short
         cell.timelabel?.text = formatter.string(from: timearr[indexPath.row] as Date)
+        var emojicontent = ""
+        if ( angryarr[indexPath.row] == 1 ) {
+            emojicontent = emojicontent + " 😠"
+        } else if ( angryarr[indexPath.row] == 2 ) {
+            emojicontent = emojicontent + " 😤"
+        } else if ( angryarr[indexPath.row] == 3 ) {
+            emojicontent = emojicontent + " 😡"
+        }
+        if ( sadarr[indexPath.row] == 1 ) {
+            emojicontent = emojicontent + " 😔"
+        } else if ( sadarr[indexPath.row] == 2 ) {
+            emojicontent = emojicontent + " 😢"
+        } else if ( sadarr[indexPath.row] == 3 ) {
+            emojicontent = emojicontent + " 😭"
+        }
+        if ( anxiousarr[indexPath.row] == 1 ) {
+            emojicontent = emojicontent + " 😓"
+        } else if ( anxiousarr[indexPath.row] == 2 ) {
+            emojicontent = emojicontent + " 😣"
+        } else if ( anxiousarr[indexPath.row] == 3 ) {
+            emojicontent = emojicontent + " 😖"
+        }
+        if ( feararr[indexPath.row] == 1 ) {
+            emojicontent = emojicontent + " 😳"
+        } else if ( feararr[indexPath.row] == 2 ) {
+            emojicontent = emojicontent + " 😨"
+        } else if ( feararr[indexPath.row] == 3 ) {
+            emojicontent = emojicontent + " 😱"
+        }
+        if ( neutralarr[indexPath.row] == 1 ) {
+            emojicontent = emojicontent + " 😐"
+        }
+        if ( playarr[indexPath.row] == 1 ) {
+            emojicontent = emojicontent + " 😛"
+        } else if ( playarr[indexPath.row] == 2 ) {
+            emojicontent = emojicontent + " 😜"
+        } else if ( playarr[indexPath.row] == 3 ) {
+            emojicontent = emojicontent + " 🤣"
+        }
+        if ( relaxarr[indexPath.row] == 1 ) {
+            emojicontent = emojicontent + " 😌"
+        } else if ( relaxarr[indexPath.row] == 2 ) {
+            emojicontent = emojicontent + " ☺️"
+        }
+        if ( happyarr[indexPath.row] == 1 ) {
+            emojicontent = emojicontent + " 🙂"
+        } else if ( happyarr[indexPath.row] == 2 ) {
+            emojicontent = emojicontent + " 😊"
+        } else if ( happyarr[indexPath.row] == 3 ) {
+            emojicontent = emojicontent + " 😀"
+        }
+        cell.emojilabel?.text = emojicontent
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let todeletedata = checkinarr[indexPath.row]
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            context.delete(todeletedata)
+            do {
+                try context.save()
+            } catch {
+                print("delete error")
+            }
+            placearr.remove(at: indexPath.row)
+            commentarr.remove(at: indexPath.row)
+            energyarr.remove(at: indexPath.row)
+            prodarr.remove(at: indexPath.row)
+            timearr.remove(at: indexPath.row)
+            angryarr.remove(at: indexPath.row)
+            sadarr.remove(at: indexPath.row)
+            anxiousarr.remove(at: indexPath.row)
+            feararr.remove(at: indexPath.row)
+            happyarr.remove(at: indexPath.row)
+            neutralarr.remove(at: indexPath.row)
+            playarr.remove(at: indexPath.row)
+            relaxarr.remove(at: indexPath.row)
+            
+            
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+        }
     }
     
     /*

@@ -576,6 +576,14 @@ func dismissKeyboard() {
         } catch {
             print("Failed saving")
         }
+        var usernow = UserdataHandler.fetchOneObject(username:globalUsername)
+        let addpoint = usernow!.point + 15
+        usernow?.setValue(addpoint, forKey: "point")
+        do {
+            try context.save()
+        } catch {
+            print("Failed updating point")
+        }
         
         let alert = UIAlertController(title: "Thanks for checking in!", message:
             "+15 points", preferredStyle: UIAlertControllerStyle.alert)

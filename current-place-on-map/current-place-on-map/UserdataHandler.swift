@@ -27,6 +27,8 @@ class UserdataHandler: NSObject {
         let newData = NSManagedObject(entity: entity!, insertInto: context)
         newData.setValue(username, forKey: "username")
         newData.setValue(password, forKey: "password")
+        newData.setValue(true, forKey: "privacy")
+        newData.setValue(0, forKey: "point")
         print(newData)
         do {
             try context.save()
@@ -46,5 +48,16 @@ class UserdataHandler: NSObject {
         } catch {
             return account
         }
+    }
+    
+    class func fetchOneObject(username:String) -> Account? {
+        let accounts = fetchObject()
+        var account:Account? = nil
+        for item in accounts! {
+            if item.username == username {
+                account = item
+            }
+        }
+        return account
     }
 }

@@ -10,14 +10,7 @@ import UIKit
 
 class LogTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var button1: UIButton!
-    @IBOutlet weak var button2: UIButton!
-    @IBOutlet weak var button3: UIButton!
-    @IBOutlet weak var button4: UIButton!
-    @IBOutlet weak var button5: UIButton!
-    @IBOutlet weak var button6: UIButton!
-    @IBOutlet weak var button7: UIButton!
-    @IBOutlet weak var button8: UIButton!
+    @IBOutlet weak var emojilabel: UILabel!
     @IBOutlet weak var commentlabel: UITextView!
     @IBOutlet weak var placelabel: UILabel!
     @IBOutlet weak var timelabel: UILabel!
