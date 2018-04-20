@@ -613,6 +613,65 @@ func dismissKeyboard() {
         self.present(alert, animated: true, completion: nil)
     }
     
+    
+    @IBAction func clickclear(_ sender: UIButton) {
+        angryd.setImage(#imageLiteral(resourceName: "angryd"), for: .normal)
+        angryscale = 0
+        sadd.setImage(#imageLiteral(resourceName: "sadd"), for: .normal)
+        sadscale = 0
+        feard.setImage(#imageLiteral(resourceName: "feard"), for: .normal)
+        fearscale = 0
+        anxiousd.setImage(#imageLiteral(resourceName: "anxiousd"), for: .normal)
+        anxiousscale = 0
+        neutrald.setImage(#imageLiteral(resourceName: "neutrald"), for: .normal)
+        neutralscale = 0
+        playd.setImage(#imageLiteral(resourceName: "playd"), for: .normal)
+        playscale = 0
+        relaxd.setImage(#imageLiteral(resourceName: "relaxd"), for: .normal)
+        relaxscale = 0
+        happyd.setImage(#imageLiteral(resourceName: "happyd"), for: .normal)
+        happyscale = 0
+        energyslider.value = 0
+        productivityslider.value = 0
+        comments.text = ""
+        
+        producticityscale = 0
+        energyscale = 0
+        angry1.center = angryd.center
+        angry2.center = angryd.center
+        angry3.center = angryd.center
+        angryd_click = false
+        sad1.center = sadd.center
+        sad2.center = sadd.center
+        sad3.center = sadd.center
+        sadd_click = false
+        anxious1.center = anxiousd.center
+        anxious2.center = anxiousd.center
+        anxious3.center = anxiousd.center
+        anxiousd_click = false
+        fear1.center = feard.center
+        fear2.center = feard.center
+        fear3.center = feard.center
+        feard_click = false
+        neutral.center = neutrald.center
+        neutrald_click = false
+        play1.center = playd.center
+        play2.center = playd.center
+        play3.center = playd.center
+        playd_click = false
+        relax1.center = relaxd.center
+        relax2.center = relaxd.center
+        relaxd_click = false
+        
+        happy1.center = happyd.center
+        happy2.center = happyd.center
+        happy3.center = happyd.center
+        happyd_click = false
+        
+        self.checkinlabel.text = "\(spaceName)"
+        checkin_loc = spaceName
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
