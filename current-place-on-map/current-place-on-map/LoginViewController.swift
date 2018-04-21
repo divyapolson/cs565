@@ -18,15 +18,40 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        //styling username + password text fields
+        UsernameText.layer.borderWidth = 2
+        PasswordText.layer.borderWidth = 2
+        UsernameText.layer.masksToBounds = true
+        PasswordText.layer.masksToBounds = true
+        UsernameText.layer.borderColor = UIColor.white.cgColor
+        PasswordText.layer.borderColor = UIColor.white.cgColor
+        UsernameText.setLeftPaddingPoints(10)
+        PasswordText.setLeftPaddingPoints(10)
+        
         //Looks for single or multiple taps.
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+        
+        //add gradient background
+        setGradientBackground()
     }
     
     //Calls this function when the tap is recognized.
     func dismissKeyboard() {
         view.endEditing(true)
+    }
+    
+    func setGradientBackground() {
+        let colorTop =  UIColor(red:0.20, green:0.68, blue:0.75, alpha:1.0).cgColor
+        let colorBottom = UIColor(red:0.23, green:0.67, blue:0.88, alpha:1.0).cgColor
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [colorTop, colorBottom]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.frame = self.view.bounds
+        
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
     }
     
     override func didReceiveMemoryWarning() {
@@ -80,4 +105,17 @@ class LoginViewController: UIViewController {
         }
     }
 
+}
+
+extension UITextField {
+    func setLeftPaddingPoints(_ amount:CGFloat){
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.leftView = paddingView
+        self.leftViewMode = .always
+    }
+    func setRightPaddingPoints(_ amount:CGFloat) {
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
+        self.rightView = paddingView
+        self.rightViewMode = .always
+    }
 }

@@ -21,8 +21,6 @@ class PlacesViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     // An array to hold the list of possible locations.
-    //var likelyPlaces: [GMSPlace] = []
-    //var selectedPlace: GMSPlace?
     
     var likelyPlaces: [String] = []
     var selectedPlace: String = ""
@@ -42,15 +40,6 @@ class PlacesViewController: UIViewController {
         
         tableView.reloadData()
     }
-    /*
-     // Pass the selected place to the new view controller.
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     if segue.identifier == "unwindToMain" {
-     if let nextViewController = segue.destination as? MapViewController {
-     nextViewController.selectedPlace = selectedPlace
-     }
-     }
-     }*/
 }
 
 // Respond when a user selects a place.
@@ -75,6 +64,7 @@ extension PlacesViewController: UITableViewDataSource {
         //cell.textLabel?.text = collectionItem.name
         cell.textLabel?.text = collectionItem
         print("MESSAGE = \(String(describing: dict[collectionItem]))")
+        cell.textLabel?.font = UIFont(name:"Avenir", size:18)
         return cell
     }
     

@@ -19,13 +19,13 @@ class SettingsViewController: UIViewController {
         let usernow = UserdataHandler.fetchOneObject(username:globalUsername)
         privacyswitch.isOn = usernow!.privacy
         if (!(privacyswitch.isOn)) {
-            privacyindication.text="(Your comments will be seen by others)"
+            privacyindication.text="Your comments will be seen by others."
         } else {
-            privacyindication.text="(Your comments will not be seen by others)"
+            privacyindication.text="Your comments will not be seen by others."
         }
         // Do any additional setup after loading the view.
     }
-
+    
     @IBAction func clickchangepw(_ sender: UIButton) {
         if( (!(cpassword.text?.isEmpty)!) && (repeatcpassword.text == cpassword.text))
         {
@@ -78,15 +78,14 @@ class SettingsViewController: UIViewController {
         }
     }
     
-    
     @IBAction func switchprivacy(_ sender: UISwitch) {
         var usernow = UserdataHandler.fetchOneObject(username:globalUsername)
         if (!(privacyswitch.isOn)) {
             usernow!.setValue(false, forKey: "privacy")
-            privacyindication.text="(Your comments will be seen by others)"
+            privacyindication.text="Your comments will be seen by others."
         } else {
             usernow!.setValue(true, forKey: "privacy")
-            privacyindication.text="(Your comments will not be seen by others)"
+            privacyindication.text="Your comments will not be seen by others."
         }
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -102,7 +101,6 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

@@ -42,7 +42,6 @@ class AccountViewController: UIViewController, UITableViewDataSource {
             viewLoadSetup()
             historytable.reloadData()
         }
-        
     }
     
     func viewLoadSetup() {
@@ -124,7 +123,7 @@ class AccountViewController: UIViewController, UITableViewDataSource {
         let formatter = DateFormatter()
         formatter.dateStyle = .medium
         formatter.timeStyle = .short
-        cell.timelabel?.text = formatter.string(from: timearr[indexPath.row] as Date)
+        cell.timelabel?.text = "   " + formatter.string(from: timearr[indexPath.row] as Date)
         var emojicontent = ""
         if ( angryarr[indexPath.row] == 1 ) {
             emojicontent = emojicontent + " 😠"

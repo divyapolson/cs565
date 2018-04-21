@@ -99,8 +99,6 @@ class MapViewController: UIViewController {
             print("The style definition could not be loaded: \(error)")
         }
         
-        
-        
         // Add the map to the view, hide it until we've got a location update.
         view.addSubview(mapView)
         mapView.isHidden = true
@@ -125,7 +123,7 @@ class MapViewController: UIViewController {
         var smallestDistance: CLLocationDistance?
         print("You are currently at \(String(describing: myLocation))")
         
-        var placeName:String = "" //added
+        var placeName:String = ""
         var nearbyPlaces = [String]()
         var nearbyPlaces0 = [String]()
         var nearbyLocation:CLLocation?
@@ -178,17 +176,7 @@ class MapViewController: UIViewController {
                 print("Current Place error: \(error.localizedDescription)")
                 return
             }
-           
-            // Get likely places and add to the list.
-             /*
-            if let likelihoodList = placeLikelihoods {
-                for likelihood in likelihoodList.likelihoods {
-                    let place = likelihood.place
-                    self.likelyPlaces.append(place)
-                }
-            }
-            */
-            
+
             self.likelyPlaces.removeAll()
             
             for nearbyLocation in globalPlaces {

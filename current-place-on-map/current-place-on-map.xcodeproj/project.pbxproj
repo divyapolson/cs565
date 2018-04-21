@@ -122,15 +122,15 @@
 		E50C79CC1E4CFE32008ECCEB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E50C79BC1E4CFDE9008ECCEB /* MapViewController.swift */,
-				E50C79CD1E4CFE5D008ECCEB /* PlacesViewController.swift */,
-				CF837105208163AA0025DEF6 /* CheckinViewController.swift */,
 				CF83710720829E470025DEF6 /* LoginViewController.swift */,
 				CF8371092082A46E0025DEF6 /* SignupViewController.swift */,
-				443F26A42082D3C8002246BE /* Constants.swift */,
+				E50C79BC1E4CFDE9008ECCEB /* MapViewController.swift */,
+				E50C79CD1E4CFE5D008ECCEB /* PlacesViewController.swift */,
 				443F26A62082D4D4002246BE /* SpaceDetailViewController.swift */,
+				CF837105208163AA0025DEF6 /* CheckinViewController.swift */,
 				CF83710D2087C01E0025DEF6 /* AccountViewController.swift */,
 				CF837113208A7D750025DEF6 /* SettingsViewController.swift */,
+				443F26A42082D3C8002246BE /* Constants.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";

@@ -14,6 +14,8 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var repeatpw: UITextField!
+    @IBOutlet weak var loginredirect: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,13 +23,45 @@ class SignupViewController: UIViewController {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+        
+        username.layer.borderWidth = 2
+        password.layer.borderWidth = 2
+        repeatpw.layer.borderWidth = 2
+        username.layer.masksToBounds = true
+        password.layer.masksToBounds = true
+        repeatpw.layer.masksToBounds = true
+        username.layer.borderColor = UIColor.white.cgColor
+        password.layer.borderColor = UIColor.white.cgColor
+        repeatpw.layer.borderColor = UIColor.white.cgColor
+        username.setLeftPaddingPoints(10)
+        password.setLeftPaddingPoints(10)
+        repeatpw.setLeftPaddingPoints(10)
+        
+        //set gradient background
+        setGradientBackground()
     }
     
     //Calls this function when the tap is recognized.
     func dismissKeyboard() {
         view.endEditing(true)
     }
-
+    
+    func setGradientBackground() {
+        let colorTop =  UIColor(red:0.20, green:0.68, blue:0.75, alpha:1.0).cgColor
+        let colorBottom = UIColor(red:0.23, green:0.67, blue:0.88, alpha:1.0).cgColor
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.colors = [colorTop, colorBottom]
+        gradientLayer.locations = [0.0, 1.0]
+        gradientLayer.frame = self.view.bounds
+        
+        self.view.layer.insertSublayer(gradientLayer, at: 0)
+    }
+    
+    @IBAction func returnlogin(_ sender: UIButton) {
+        performSegue(withIdentifier: "gotologin", sender: self)
+    }
+    
     @IBAction func createaccountpressed(_ sender: UIButton) {
         
         if((!((username.text?.isEmpty)!)) && (!(password.text?.isEmpty)!) && (password.text == repeatpw.text))
@@ -37,9 +71,9 @@ class SignupViewController: UIViewController {
                 NSLog("Create account Successful");
                 performSegue(withIdentifier: "gotologin", sender: nil)
             } else {
-                NSLog("Create account failer");
+                NSLog("Create account failed");
                 let alert1 = UIAlertController(title: "Create account failed", message:
-                    "Already exist this username", preferredStyle: UIAlertControllerStyle.alert)
+                    "This username already exists", preferredStyle: UIAlertControllerStyle.alert)
                 alert1.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: { (action) in
                     alert1.dismiss(animated:true, completion:nil)
                     self.username.text = ""
@@ -58,7 +92,7 @@ class SignupViewController: UIViewController {
                     "Username and password can't be empty", preferredStyle: UIAlertControllerStyle.alert)
             }else if (password.text != repeatpw.text) {
                 alert = UIAlertController(title: "Create account failed", message:
-                    "password entered in two times didn't match", preferredStyle: UIAlertControllerStyle.alert)
+                    "Password entered didn't match", preferredStyle: UIAlertControllerStyle.alert)
             }
             alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: { (action) in
                 alert.dismiss(animated:true, completion:nil)
@@ -75,16 +109,4 @@ class SignupViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
