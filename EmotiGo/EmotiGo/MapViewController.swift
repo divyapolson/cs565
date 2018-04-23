@@ -61,7 +61,7 @@ class MapViewController: UIViewController {
         
         let content = UNMutableNotificationContent()
         content.title = "Long time no see!"
-        content.body = "You haven't checked in recently! You're near Bardeen Quad, would you like to check in?"
+        content.body = "You haven't checked in recently! You're near Grainger Library, would you like to check in?"
         content.sound = UNNotificationSound.default()
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
         let request = UNNotificationRequest(identifier: "timeidentifier", content: content, trigger: trigger)
